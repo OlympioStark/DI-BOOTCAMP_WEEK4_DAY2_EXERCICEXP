@@ -1,0 +1,11 @@
+<table>
+    <tr>
+        <th>Nom du produit</th>
+        <th>Prix du produit</th>
+    </tr>
+
+    <tr *ngFor="let product of Products" [ngClass]="productColor(product.price)">
+        <td appBoldDirective> {{product.name}} </td>
+        <td> {{product.price | currency}}</td>
+    </tr>
+</table>
